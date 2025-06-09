@@ -8,8 +8,7 @@
 $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    libudfpshandler
+TARGET_HAS_UDFPS := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -22,12 +21,9 @@ PRODUCT_PACKAGES += \
     SystemUIResMars \
     WifiResMars
 
-# Sensors
+# PowerShare
 PRODUCT_PACKAGES += \
-    sensors.xiaomi.v2
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    vendor.lineage.powershare-service.default
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
