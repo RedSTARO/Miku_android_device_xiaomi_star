@@ -7,8 +7,8 @@
 # Inherit from star device
 $(call inherit-product, device/xiaomi/star/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inhert some common miku stuff
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := star
