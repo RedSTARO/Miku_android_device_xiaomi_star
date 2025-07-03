@@ -1,0 +1,125 @@
+From 85e6de45914d50bd6fbe86fbe8ca7e57022a3caa Mon Sep 17 00:00:00 2001
+From: RedSTARO <822858602@qq.com>
+Date: Thu, 3 Jul 2025 01:05:50 +0800
+Subject: [PATCH 1/2] MikuUI V Build!
+
+---
+ Android.bp | 81 ++----------------------------------------------------
+ 1 file changed, 3 insertions(+), 78 deletions(-)
+
+diff --git a/Android.bp b/Android.bp
+index f90deb1..c7b31b5 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -9547,6 +9547,7 @@ cc_prebuilt_library_shared {
+ cc_prebuilt_library_shared {
+     name: "camera.qcom",
+     owner: "xiaomi",
++    allow_undefined_symbols: true,
+     strip: {
+         none: true,
+     },
+@@ -9684,6 +9685,7 @@ cc_prebuilt_library_shared {
+ 
+ cc_prebuilt_library_shared {
+     name: "com.qti.chi.override",
++    allow_undefined_symbols: true,
+     owner: "xiaomi",
+     strip: {
+         none: true,
+@@ -10690,84 +10692,6 @@ cc_prebuilt_library_shared {
+     soc_specific: true,
+ }
+ 
+-cc_prebuilt_library_shared {
+-    name: "libcapiv2svacnn",
+-    owner: "xiaomi",
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/vendor/lib64/libcapiv2svacnn.so",
+-            ],
+-            shared_libs: [
+-                "libcutils",
+-                "liblog",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    soc_specific: true,
+-}
+-
+-cc_prebuilt_library_shared {
+-    name: "libcapiv2svarnn",
+-    owner: "xiaomi",
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/vendor/lib64/libcapiv2svarnn.so",
+-            ],
+-            shared_libs: [
+-                "libcutils",
+-                "liblog",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    soc_specific: true,
+-}
+-
+-cc_prebuilt_library_shared {
+-    name: "libcapiv2vop",
+-    owner: "xiaomi",
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/vendor/lib64/libcapiv2vop.so",
+-            ],
+-            shared_libs: [
+-                "libcutils",
+-                "liblog",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    soc_specific: true,
+-}
+-
+ cc_prebuilt_library_shared {
+     name: "libchilog",
+     owner: "xiaomi",
+@@ -11766,6 +11690,7 @@ cc_prebuilt_library_shared {
+ 
+ cc_prebuilt_library_shared {
+     name: "libmialgoengine",
++    allow_undefined_symbols: true,
+     owner: "xiaomi",
+     strip: {
+         none: true,
+-- 
+2.39.5
+
