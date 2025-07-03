@@ -22,10 +22,6 @@ PRODUCT_PACKAGES += \
     SystemUIResMars \
     WifiResMars
 
-# PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare-service.default
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.xiaomi.v2
