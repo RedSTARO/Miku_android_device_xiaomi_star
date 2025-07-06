@@ -23,3 +23,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=star_global
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
