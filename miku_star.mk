@@ -13,7 +13,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := star
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2102K1AC
-PRODUCT_NAME := lineage_star
+PRODUCT_NAME := miku_star
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="star_global-user 14 UKQ1.231207.002 V816.0.11.0.UKAMIXM release-keys" \
